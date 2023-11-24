@@ -1,0 +1,26 @@
+.photo {
+  float: left;
+  margin-right: 2em;
+}
+
+.hide {
+  display: none;
+}
+
+thead {
+  display: none;
+}
+
+table {
+  margin-top: 1em;
+}
+
+td {
+  padding-bottom: 1em;
+  vertical-align: top;
+}
+
+tr>td:first-child {
+  color: #5E8CDE;
+  width: 8.75em;
+}
