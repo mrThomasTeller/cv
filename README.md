@@ -47,3 +47,16 @@
 | с&nbsp;10.2011 по&nbsp;11.2011 | **Full-stack-разработчик в компании UTS** (Универсальные Терминальные Системы, Томск). Разработка системы мониторинга городских платёжных терминалов. `PHP`, `PostgreSQL`, `C#` (`ASP.NET`), `JS` (`Qooxdoo`). https://unitsys.ru/                                                                                                                                                                                         |
 | с&nbsp;01.2010 по&nbsp;07.2011 | **Full-stack разработчик в компании Avvea**, разрабатывающей новые технологии в интернет-рекламе (CPA). Управлял небольшой группой JS-разработчиков. Проектировка системы (UML). `PostgreSQL`, `JS` (`jQuery`, `ExtJS`), `C#`, `PHP`, `FreeBSD`. [avvea.ru](http://web.archive.org/web/20120521052046/http://avvea.ru/)                                                                                                    |
 | 2009                           | Фриланс (в основном **Full-stack веб-разработка**). `MySQL`, `PHP` (`Kohana`), `CSS`, `JS` (`jQuery`, `ExtJS`)                                                                                                                                                                                                                                                                                                             |
+
+<p class="hide">
+  <br>
+  <br>
+  <br>
+  <p>
+    <a href="https://mrthomasteller.github.io/cv/cv.pdf">PDF-версия</a>
+  </p>
+  <p>
+  <a href="https://mrthomasteller.github.io/cv/">Веб-версия</a>
+  </p>
+  PS: Это моё резюме, но вы можете использовать его для себя. Просто форкните этот репозиторий и смотрите <a href="src/README.md">src/README.md</a>.
+</p>

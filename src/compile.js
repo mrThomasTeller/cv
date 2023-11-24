@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 const templatePath = path.join(__dirname, 'template.html');
 const readmePath = path.join(__dirname, '../README.md');
 const outputPath = path.join(__dirname, '../index.html');
-const pdfPath = path.join(__dirname, '../artem-backharev.pdf');
+const pdfPath = path.join(__dirname, '../cv.pdf');
 
 // Function to generate HTML file
 const compileHTML = _.throttle(() => {

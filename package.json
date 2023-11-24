@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "prod:install": "pnpm install --prod --frozen-lockfile",
     "compile": "node src/compile.js"
   },
   "keywords": [],
