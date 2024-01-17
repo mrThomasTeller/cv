@@ -17,11 +17,11 @@
 
 ## Цель
 
-Частичная занятость (20-30 часов в неделю) в качестве Tech-lead Front-end разработчика. Санкт-Петербург, офис.
+Частичная занятость (20-30 часов в неделю) в качестве Tech-lead Front-end или Full-Stack разработчика. Санкт-Петербург, офис.
 
 ## Кратко
 
-- 12 лет опыта Front-end разработки (`TypeScript`, `React`, `Redux Toolkit`, `WebPack`, `Docker`)
+- 12 лет опыта Front-end разработки (Основной стек - `TypeScript`, `Redux Toolkit`, `WebPack`, `Docker`)
 - Был тех-лидом Front-end разработки в компании ShareVault с большим и долгосрочным проектом (США, https://sharevault.com)
 - Был ведущим Front-end разработчиком в интернет-магазине с высокой посещаемостью (https://sotmarket.ru)
 
