@@ -15,12 +15,17 @@
 <nobr>![email:](images/email.svg) artyom.bakharev@gmail.com</nobr>&emsp;
 <nobr>![GitHub:](images/github.svg) https://github.com/mrThomasTeller</nobr>
 
+## Цель
+
+Ищу работу в качестве Senior/Tech-lead Front-end или Full-stack разработчика. Полный рабочий день, офис или гибрид.
+
 ## Кратко
 
-- 12 лет опыта Front-end и 3 года опыта Full-stack разработки (Основной стек - `NextJS`, `TypeScript`, `Redux Toolkit`, `WebPack`, `Docker`)
+- 12 лет опыта Front-end и 3 года опыта Full-stack разработки (Основной стек - `NextJS`, `React`, `TypeScript`, `Redux Toolkit`, `WebPack`, `Docker`, `GitLab CI/CD`)
 - Был тех-лидом Front-end разработки в компании ShareVault с большим и долгосрочным проектом (США, https://sharevault.com)
 - Был ведущим Front-end разработчиком в интернет-магазине с высокой посещаемостью (https://sotmarket.ru)
 - Отвечал за создание компонентных дизайн-систем, архитектуру проприетарных фреймворков, а также за оптимизацию производительности нагруженных интерфейсов
+- Активно применяю AI-инструменты для разработки (собственные скиллы для агентов, автотесты и нагрузочное тестирование, разработка по спецификациям `Superpowers`/`SpecKit`)
 
 ## Ещё
 
@@ -36,7 +41,7 @@
 
 | Дата                           | Место работы                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| с&nbsp;01.2024 | **Ведущий Full-stack разработчик в компании по автоматизации продаж Nirguna.** Разрабатываю приложение для создания сценариев автоматизации. `NextJS`, `React`, `tRPC`, `PostgreSQL`, `Docker`. https://nirguna.ru/                                                                                                                                                                                               |
+| с&nbsp;01.2024                 | **Ведущий Full-stack разработчик в компании по автоматизации продаж Nirguna.** Разработал комплекс решений для ERP "Мой Склад". Главное из них: `Роботы 365` - no code решение для создания сценариев автоматизации. `NextJS`, `React`, `TypeScript`, `MUI`, `tRPC`, `PostgreSQL`, `Docker`, `Claude Code`. https://nirguna.ru/                                                                                            |
 | с&nbsp;03.2022 по&nbsp;08.2023 | **Преподаватель, ментор Full-stack JavaScript/TypeScript в школе Elbrus Bootcamp.** Также работал над учебной программой. `React`, `Redux Toolkit`, `NodeJS`, `Express JS`, `PostgreSQL`, `Docker`. https://elbrusboot.camp/                                                                                                                                                                                               |
 | с&nbsp;08.2015 по&nbsp;02.2022 | **Tech Lead Front-end разработчик в компании ShareVault** (США, удалённая работа). Отвечал за архитектуру и разрабатывал веб-интерсейс для облачного хранилища (в т.ч. мобильный). В разработке использовался чисто функциональный подход. `Ramda` (ФП для JS), `React`, `Redux`, `TypeScript`, `Styled Components`, `webpack`, `Jest` для Unit-тестирования, `TestCafe` для E2E тестирования. https://www.sharevault.com/ |
 | с&nbsp;11.2012 по&nbsp;06.2015 | **Head Front-end разработчик в интернет-магазине "Сотмаркет"** (Москва). `JS` (`jQuery`), `CSS` (`БЭМ`). [www.sotmarket.ru](http://web.archive.org/web/20150421092312/http://www.sotmarket.ru/)                                                                                                                                                                                                                            |
@@ -47,7 +52,7 @@
 
 ## ![icon](images/window-stack.svg) Мои проекты
 
-- **Shorty** - телеграмм-бот, который создаёт краткую выжимку из сообщений в группе с помощью GPT4. `TypeScript`, `NodeJs`, `RxJS`, `Jest`, `Docker`. [Бот](https://t.me/shorty_chat_bot), [GitHub](https://github.com/mrThomasTeller/shorty-telegram-summarization-bot)
+- **Shorty** - телеграмм-бот, который создаёт краткую выжимку из сообщений в группе с помощью GPT4. `TypeScript`, `NodeJs`, `RxJS`, `Jest`, `Docker`. [GitHub](https://github.com/mrThomasTeller/shorty-telegram-summarization-bot)
 
 <div class="hide">
   <br>

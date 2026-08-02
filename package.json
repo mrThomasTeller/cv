@@ -1,19 +1,13 @@
 {
   "name": "cv",
-  "version": "1.0.0",
-  "description": "**Резюме**",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Резюме: README.md → index.html → cv.pdf",
   "type": "module",
   "scripts": {
-    "compile": "node src/compile.js"
+    "compile-pdf": "node src/compile-pdf.js"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
-    "chokidar": "^3.5.3",
-    "lodash": "^4.17.21",
-    "marked": "^10.0.0",
-    "puppeteer": "^21.5.2"
+    "puppeteer": "^25.4.0"
   }
 }
