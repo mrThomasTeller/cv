@@ -4,6 +4,8 @@
 
 # Бахарев Артём Александрович
 
+**Senior+/Tech Lead Frontend Engineer · React / TypeScript / Frontend Architecture**
+
 **![icon](images/calendar-event.svg) Дата рождения:** 15.01.1990
 
 **![icon](images/geo-alt.svg) Город:** Санкт-Петербург
@@ -17,7 +19,7 @@
 
 ## Цель
 
-Ищу работу в качестве Senior/Tech-lead Front-end или Full-stack разработчика. Полный рабочий день, офис или гибрид.
+Ищу работу в качестве Senior/Tech-lead Front-end разработчика. Полный рабочий день, офис или гибрид.
 
 ## Кратко
 
@@ -49,10 +51,6 @@
 | с&nbsp;10.2011 по&nbsp;11.2011 | **Full-stack-разработчик в компании UTS** (Универсальные Терминальные Системы, Томск). Разработка системы мониторинга городских платёжных терминалов. `PHP`, `PostgreSQL`, `C#` (`ASP.NET`), `JS` (`Qooxdoo`). https://unitsys.ru/                                                                                                                                                                                         |
 | с&nbsp;01.2010 по&nbsp;07.2011 | **Full-stack разработчик в компании Avvea**, разрабатывающей новые технологии в интернет-рекламе (CPA). Управлял небольшой группой JS-разработчиков. Проектировка системы (UML). `PostgreSQL`, `JS` (`jQuery`, `ExtJS`), `C#`, `PHP`, `FreeBSD`. [avvea.ru](http://web.archive.org/web/20120521052046/http://avvea.ru/)                                                                                                    |
 | 2009                           | Фриланс (в основном **Full-stack веб-разработка**). `MySQL`, `PHP` (`Kohana`), `CSS`, `JS` (`jQuery`, `ExtJS`)                                                                                                                                                                                                                                                                                                             |
-
-## ![icon](images/window-stack.svg) Мои проекты
-
-- **Shorty** - телеграмм-бот, который создаёт краткую выжимку из сообщений в группе с помощью GPT4. `TypeScript`, `NodeJs`, `RxJS`, `Jest`, `Docker`. [GitHub](https://github.com/mrThomasTeller/shorty-telegram-summarization-bot)
 
 <div class="hide">
   <br>

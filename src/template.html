@@ -1,421 +1,630 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{TITLE}}</title>
-<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --accent: #b4552d;
-    --accent-dark: #8d3f1e;
-    --accent-soft: #f8efe8;
-    --ink: #1b1a18;
-    --ink-soft: #55514b;
-    --ink-muted: #918b82;
-    --line: #e4e0d8;
-    --bg: #edeae4;
-    --card: #fbfaf8;
-    --chip-bg: #f3f0ea;
-    --chip-ink: #4b473f;
-    --radius: 4px;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{TITLE}}</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #b4552d;
+        --accent-dark: #8d3f1e;
+        --accent-soft: #f8efe8;
+        --ink: #1b1a18;
+        --ink-soft: #55514b;
+        --ink-muted: #918b82;
+        --line: #e4e0d8;
+        --bg: #edeae4;
+        --card: #fbfaf8;
+        --chip-bg: #f3f0ea;
+        --chip-ink: #4b473f;
+        --radius: 4px;
+      }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  html { -webkit-text-size-adjust: 100%; }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
 
-  body {
-    font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.6;
-    font-size: 15.5px;
-    padding: 44px 16px 64px;
-    text-wrap: pretty;
-  }
+      body {
+        font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "Helvetica Neue", Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+        font-size: 15.5px;
+        padding: 44px 16px 64px;
+        text-wrap: pretty;
+      }
 
-  .page {
-    max-width: 880px;
-    margin: 0 auto;
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: 0 1px 2px rgba(27, 26, 24, .05), 0 24px 60px -28px rgba(27, 26, 24, .30);
-    overflow: hidden;
-    border-top: 5px solid var(--accent);
-  }
+      .page {
+        max-width: 880px;
+        margin: 0 auto;
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: 0 1px 2px rgba(27, 26, 24, 0.05),
+          0 24px 60px -28px rgba(27, 26, 24, 0.3);
+        overflow: hidden;
+        border-top: 5px solid var(--accent);
+      }
 
-  /* ---------- Header ---------- */
-  header {
-    position: relative;
-    padding: 44px 52px 26px;
-    background:
-      radial-gradient(900px 340px at 88% -140px, rgba(180, 85, 45, .10), transparent 62%),
-      var(--card);
-  }
+      /* ---------- Header ---------- */
+      header {
+        position: relative;
+        padding: 44px 52px 26px;
+        background: radial-gradient(
+            900px 340px at 88% -140px,
+            rgba(180, 85, 45, 0.1),
+            transparent 62%
+          ),
+          var(--card);
+      }
 
-  .header-main {
-    display: flex;
-    gap: 34px;
-    align-items: flex-start;
-  }
+      .header-main {
+        display: flex;
+        gap: 34px;
+        align-items: flex-start;
+      }
 
-  .photo {
-    width: 132px;
-    height: 198px;
-    border-radius: 3px;
-    object-fit: contain;
-    object-position: center;
-    flex-shrink: 0;
-    filter: grayscale(.15) contrast(1.02);
-    box-shadow: 0 0 0 1px var(--line), 10px 10px 0 -1px var(--accent-soft);
-  }
+      .photo {
+        width: 132px;
+        height: 198px;
+        border-radius: 3px;
+        object-fit: contain;
+        object-position: center;
+        flex-shrink: 0;
+        filter: grayscale(0.15) contrast(1.02);
+        box-shadow: 0 0 0 1px var(--line), 10px 10px 0 -1px var(--accent-soft);
+      }
 
-  h1 {
-    font-family: "Instrument Serif", Georgia, serif;
-    font-size: 42px;
-    font-weight: 400;
-    letter-spacing: -.015em;
-    line-height: 1.05;
-  }
+      h1 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 42px;
+        font-weight: 400;
+        letter-spacing: -0.015em;
+        line-height: 1.05;
+      }
 
-  .role {
-    margin-top: 9px;
-    font-size: 13.5px;
-    font-weight: 700;
-    letter-spacing: .085em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
+      .role {
+        margin-top: 9px;
+        font-size: 13.5px;
+        font-weight: 700;
+        letter-spacing: 0.085em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
 
-  .facts {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    color: var(--ink-soft);
-    font-size: 14px;
-  }
+      .facts {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: var(--ink-soft);
+        font-size: 14px;
+      }
 
-  .facts .icon { color: var(--accent); opacity: .75; }
+      .facts .icon {
+        color: var(--accent);
+        opacity: 0.75;
+      }
 
-  .fact {
-    display: flex;
-    gap: 9px;
-    align-items: baseline;
-  }
+      .fact {
+        display: flex;
+        gap: 9px;
+        align-items: baseline;
+      }
 
-  .fact strong { font-weight: 700; color: var(--ink); }
+      .fact strong {
+        font-weight: 700;
+        color: var(--ink);
+      }
 
-  .fact .icon { position: relative; top: 2px; flex-shrink: 0; }
+      .fact .icon {
+        position: relative;
+        top: 2px;
+        flex-shrink: 0;
+      }
 
-  .contacts {
-    margin-top: 26px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-  }
+      .contacts {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
 
-  .contact {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: transparent;
-    border: 1px solid var(--line);
-    color: var(--ink-soft);
-    text-decoration: none;
-    font-size: 12.5px;
-    font-weight: 600;
-    transition: background .15s, border-color .15s, color .15s;
-  }
+      .contact {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: transparent;
+        border: 1px solid var(--line);
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-size: 10.5px;
+        font-weight: 600;
+        transition: background 0.15s, border-color 0.15s, color 0.15s;
+      }
 
-  .contact:hover { background: var(--accent-soft); border-color: #ecd9cc; color: var(--accent-dark); text-decoration: none; }
-  .contact .icon { width: 12px; height: 12px; color: var(--accent); }
+      .contact:hover {
+        background: var(--accent-soft);
+        border-color: #ecd9cc;
+        color: var(--accent-dark);
+        text-decoration: none;
+      }
+      .contact .icon {
+        width: 12px;
+        height: 12px;
+        color: var(--accent);
+      }
 
-  .icon {
-    width: 15px;
-    height: 15px;
-    display: inline-block;
-    vertical-align: -2px;
-    fill: currentColor;
-  }
+      .icon {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: -2px;
+        fill: currentColor;
+      }
 
-  /* ---------- Sections ---------- */
-  main { padding: 0 52px 48px; }
+      /* ---------- Sections ---------- */
+      main {
+        padding: 0 52px 48px;
+      }
 
-  section { margin-top: 30px; }
+      section {
+        margin-top: 30px;
+      }
 
-  h2 {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: "Instrument Serif", Georgia, serif;
-    font-size: 26px;
-    font-weight: 400;
-    letter-spacing: -.01em;
-    margin-bottom: 18px;
-    color: var(--ink);
-  }
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+        margin-bottom: 18px;
+        color: var(--ink);
+      }
 
-  h2::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: var(--line);
-  }
+      h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
 
-  h2 .icon-badge {
-    color: var(--accent);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
+      h2 .icon-badge {
+        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
 
-  h2 .icon-badge .icon { width: 17px; height: 17px; }
+      h2 .icon-badge .icon {
+        width: 17px;
+        height: 17px;
+      }
 
-  ul.list { list-style: none; }
+      ul.list {
+        list-style: none;
+      }
 
-  ul.list li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 9px;
-    color: var(--ink-soft);
-  }
+      ul.list li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 9px;
+        color: var(--ink-soft);
+      }
 
-  ul.list li::before {
-    content: "";
-    position: absolute;
-    left: 2px;
-    top: .68em;
-    width: 5px;
-    height: 5px;
-    transform: rotate(45deg);
-    background: var(--accent);
-  }
+      ul.list li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 0.68em;
+        width: 5px;
+        height: 5px;
+        transform: rotate(45deg);
+        background: var(--accent);
+      }
 
-  ul.list li strong { color: var(--ink); font-weight: 700; }
+      ul.list li strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
 
-  .section-text { color: var(--ink-soft); }
+      .section-text {
+        color: var(--ink-soft);
+      }
 
-  .section-text strong { color: var(--ink); font-weight: 700; }
+      .section-text strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
 
-  code, .tag {
-    font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-    font-size: .78em;
-    background: var(--chip-bg);
-    color: var(--chip-ink);
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    padding: 1.5px 6px;
-    white-space: nowrap;
-  }
+      code,
+      .tag {
+        font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas,
+          monospace;
+        font-size: 0.78em;
+        background: var(--chip-bg);
+        color: var(--chip-ink);
+        border: 1px solid var(--line);
+        border-radius: 3px;
+        padding: 1.5px 6px;
+        white-space: nowrap;
+      }
 
-  a { color: var(--accent-dark); text-decoration: none; border-bottom: 1px solid rgba(180, 85, 45, .3); }
-  a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+      a {
+        color: var(--accent-dark);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(180, 85, 45, 0.3);
+      }
+      a:hover {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
 
-  /* ---------- Timeline ---------- */
-  .timeline { position: relative; }
+      /* ---------- Timeline ---------- */
+      .timeline {
+        position: relative;
+      }
 
-  .job {
-    position: relative;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 26px;
-    padding-bottom: 26px;
-  }
+      .job {
+        position: relative;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 26px;
+        padding-bottom: 26px;
+      }
 
-  .job:last-child { padding-bottom: 0; }
+      .job:last-child {
+        padding-bottom: 0;
+      }
 
-  .job::before {
-    content: "";
-    position: absolute;
-    left: 170px;
-    top: 8px;
-    bottom: -8px;
-    width: 1px;
-    background: var(--line);
-  }
+      .job::before {
+        content: "";
+        position: absolute;
+        left: 170px;
+        top: 8px;
+        bottom: -8px;
+        width: 1px;
+        background: var(--line);
+      }
 
-  .job:last-child::before { bottom: auto; height: 5.5px; }
+      .job:last-child::before {
+        bottom: auto;
+        height: 5.5px;
+      }
 
-  .job::after {
-    content: "";
-    position: absolute;
-    left: 164px;
-    top: 7px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--card);
-    border: 2px solid var(--accent);
-    opacity: .55;
-  }
+      .job::after {
+        content: "";
+        position: absolute;
+        left: 164px;
+        top: 7px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--card);
+        border: 2px solid var(--accent);
+        opacity: 0.55;
+      }
 
-  .job.current::after {
-    background: var(--accent);
-    opacity: 1;
-    box-shadow: 0 0 0 4px rgba(180, 85, 45, .14);
-  }
+      .job.current::after {
+        background: var(--accent);
+        opacity: 1;
+        box-shadow: 0 0 0 4px rgba(180, 85, 45, 0.14);
+      }
 
-  .job-date {
-    text-align: right;
-    padding-right: 12px;
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--ink-muted);
-    line-height: 1.5;
-    padding-top: 4px;
-    white-space: nowrap;
-  }
+      .job-date {
+        text-align: right;
+        padding-right: 12px;
+        font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
+        font-size: 12px;
+        font-weight: 400;
+        color: var(--ink-muted);
+        line-height: 1.5;
+        padding-top: 4px;
+        white-space: nowrap;
+      }
 
-  .job.current .job-date { color: var(--accent); font-weight: 500; }
+      .job.current .job-date {
+        color: var(--accent);
+        font-weight: 500;
+      }
 
-  .job-body { padding-left: 18px; min-width: 0; }
+      .job-body {
+        padding-left: 18px;
+        min-width: 0;
+      }
 
-  .job-title { font-weight: 700; font-size: 15.5px; letter-spacing: -.005em; }
+      .job-title {
+        font-weight: 700;
+        font-size: 15.5px;
+        letter-spacing: -0.005em;
+      }
 
-  .job-place { color: var(--ink-muted); font-weight: 500; }
+      .job-place {
+        color: var(--ink-muted);
+        font-weight: 500;
+      }
 
-  .job-desc { margin-top: 4px; color: var(--ink-soft); font-size: 14.5px; }
+      .job-desc {
+        margin-top: 4px;
+        color: var(--ink-soft);
+        font-size: 14.5px;
+      }
 
-  .job-tags { margin-top: 9px; display: flex; flex-wrap: wrap; gap: 5px; }
+      .job-tags {
+        margin-top: 9px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
 
-  .job-link { display: inline-block; margin-top: 8px; font-size: 13px; }
+      .job-link {
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 13px;
+      }
 
-  /* ---------- Projects ---------- */
-  .project {
-    background: var(--accent-soft);
-    border: 1px solid #efe0d5;
-    border-radius: 4px;
-    padding: 18px 22px;
-  }
+      /* ---------- Projects ---------- */
+      .project {
+        background: var(--accent-soft);
+        border: 1px solid #efe0d5;
+        border-radius: 4px;
+        padding: 18px 22px;
+      }
 
-  .project-name { font-weight: 800; font-size: 15.5px; }
+      .project-name {
+        font-weight: 800;
+        font-size: 15.5px;
+      }
 
-  .project-desc { margin-top: 3px; color: var(--ink-soft); font-size: 14.5px; }
+      .project-desc {
+        margin-top: 3px;
+        color: var(--ink-soft);
+        font-size: 14.5px;
+      }
 
-  .project-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px; }
+      .project-tags {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
 
-  .project-tags .tag { background: rgba(255,255,255,.7); border-color: #efe0d5; }
+      .project-tags .tag {
+        background: rgba(255, 255, 255, 0.7);
+        border-color: #efe0d5;
+      }
 
-  .project-links { margin-top: 12px; display: flex; gap: 18px; font-size: 13px; font-weight: 600; }
+      .project-links {
+        margin-top: 12px;
+        display: flex;
+        gap: 18px;
+        font-size: 13px;
+        font-weight: 600;
+      }
 
-  /* ---------- Responsive ---------- */
-  @media (max-width: 700px) {
-    body { padding: 0; }
-    .page { border-radius: 0; }
-    header, main { padding-left: 22px; padding-right: 22px; }
-    .header-main { flex-direction: column; align-items: center; text-align: center; }
-    .photo { box-shadow: 0 0 0 1px var(--line); }
-    h1 { font-size: 34px; }
-    .facts { align-items: center; }
-    .fact { text-align: left; }
-    .contacts { justify-content: center; }
-    .job { grid-template-columns: 1fr; gap: 4px; }
-    .job::before, .job::after { display: none; }
-    .job-date { text-align: left; padding: 0; }
-    .job-body { padding-left: 0; }
-  }
+      /* ---------- Responsive ---------- */
+      @media (max-width: 700px) {
+        body {
+          padding: 0;
+        }
+        .page {
+          border-radius: 0;
+        }
+        header,
+        main {
+          padding-left: 22px;
+          padding-right: 22px;
+        }
+        .header-main {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .photo {
+          box-shadow: 0 0 0 1px var(--line);
+        }
+        h1 {
+          font-size: 34px;
+        }
+        .facts {
+          align-items: center;
+        }
+        .fact {
+          text-align: left;
+        }
+        .contacts {
+          justify-content: center;
+        }
+        .job {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+        .job::before,
+        .job::after {
+          display: none;
+        }
+        .job-date {
+          text-align: left;
+          padding: 0;
+        }
+        .job-body {
+          padding-left: 0;
+        }
+      }
 
-  /* ---------- Print (PDF собирается без полей: отступы внутри, фон — в край листа) ---------- */
-  @media print {
-    body { background: var(--card); padding: 0; font-size: 13px; }
-    .page { box-shadow: none; border-radius: 0; max-width: none; }
-    header { padding: 30px 44px 16px; }
-    main { padding: 0 44px 36px; }
-    section { margin-top: 24px; }
-    h2 { margin-bottom: 14px; }
-    .photo { box-shadow: 0 0 0 1px var(--line); }
-    .experience-section { break-before: page; margin-top: 0; padding-top: 26px; }
-    .job { break-inside: avoid; padding-top: 14px; padding-bottom: 12px; }
-    .job::before { top: 22px; bottom: -22px; }
-    .job:last-child::before { bottom: auto; height: 19.5px; }
-    .job::after { top: 21px; }
-    .job-date { padding-top: 18px; }
-    a { color: var(--accent-dark); }
-  }
-</style>
-</head>
-<body>
-<div class="page">
-
-  <header>
-    <div class="header-main">
-      <img class="photo" src="images/photo.jpg" alt="{{NAME}} — фото">
-      <div>
-        <h1>{{NAME}}</h1>
-        <div class="role">{{ROLE}}</div>
-        <div class="facts">
-{{FACTS}}
+      /* ---------- Print (PDF собирается без полей: отступы внутри, фон — в край листа) ---------- */
+      @media print {
+        body {
+          background: var(--card);
+          padding: 0;
+          font-size: 13px;
+        }
+        .page {
+          box-shadow: none;
+          border-radius: 0;
+          max-width: none;
+        }
+        header {
+          padding: 30px 44px 16px;
+        }
+        main {
+          padding: 0 44px 36px;
+        }
+        section {
+          margin-top: 24px;
+        }
+        h2 {
+          margin-bottom: 14px;
+        }
+        .photo {
+          box-shadow: 0 0 0 1px var(--line);
+        }
+        .experience-section {
+          break-before: page;
+          margin-top: 0;
+          padding-top: 26px;
+        }
+        .job {
+          break-inside: avoid;
+          padding-top: 14px;
+          padding-bottom: 12px;
+        }
+        .job::before {
+          top: 22px;
+          bottom: -22px;
+        }
+        .job:last-child::before {
+          bottom: auto;
+          height: 19.5px;
+        }
+        .job::after {
+          top: 21px;
+        }
+        .job-date {
+          padding-top: 18px;
+        }
+        a {
+          color: var(--accent-dark);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="header-main">
+          <img class="photo" src="images/photo.jpg" alt="{{NAME}} — фото" />
+          <div>
+            <h1>{{NAME}}</h1>
+            <div class="role">{{ROLE}}</div>
+            <div class="facts">{{FACTS}}</div>
+          </div>
         </div>
-      </div>
+
+        <div class="contacts">{{CONTACTS}}</div>
+      </header>
+
+      <main>
+        <section>
+          <h2>
+            <span class="icon-badge"
+              ><svg class="icon" viewBox="0 0 16 16">
+                <path
+                  d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"
+                />
+                <path
+                  d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"
+                /></svg
+            ></span>
+            {{GOAL_TITLE}}
+          </h2>
+          <p class="section-text">{{GOAL_TEXT}}</p>
+        </section>
+
+        <section>
+          <h2>
+            <span class="icon-badge"
+              ><svg class="icon" viewBox="0 0 16 16">
+                <path
+                  d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"
+                /></svg
+            ></span>
+            {{SUMMARY_TITLE}}
+          </h2>
+          <ul class="list">
+            {{SUMMARY_ITEMS}}
+          </ul>
+        </section>
+
+        <section>
+          <h2>
+            <span class="icon-badge"
+              ><svg class="icon" viewBox="0 0 16 16">
+                <path
+                  d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"
+                />
+                <path
+                  d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"
+                /></svg
+            ></span>
+            {{EXTRA_TITLE}}
+          </h2>
+          <ul class="list">
+            {{EXTRA_ITEMS}}
+          </ul>
+        </section>
+
+        <section class="experience-section">
+          <h2>
+            <span class="icon-badge"
+              ><svg class="icon" viewBox="0 0 16 16">
+                <path
+                  d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"
+                />
+                <path
+                  d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"
+                /></svg
+            ></span>
+            {{EXPERIENCE_TITLE}}
+          </h2>
+
+          <div class="timeline">{{JOBS}}</div>
+        </section>
+
+        <section>
+          <h2>
+            <span class="icon-badge"
+              ><svg class="icon" viewBox="0 0 16 16">
+                <path
+                  d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"
+                /></svg
+            ></span>
+            {{PROJECTS_TITLE}}
+          </h2>
+          {{PROJECTS}}
+        </section>
+      </main>
     </div>
 
-    <div class="contacts">
-{{CONTACTS}}
-    </div>
-  </header>
-
-  <main>
-
-    <section>
-      <h2>
-        <span class="icon-badge"><svg class="icon" viewBox="0 0 16 16"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/><path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/></svg></span>
-        {{GOAL_TITLE}}
-      </h2>
-      <p class="section-text">{{GOAL_TEXT}}</p>
-    </section>
-
-    <section>
-      <h2>
-        <span class="icon-badge"><svg class="icon" viewBox="0 0 16 16"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/></svg></span>
-        {{SUMMARY_TITLE}}
-      </h2>
-      <ul class="list">
-{{SUMMARY_ITEMS}}
-      </ul>
-    </section>
-
-    <section>
-      <h2>
-        <span class="icon-badge"><svg class="icon" viewBox="0 0 16 16"><path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/></svg></span>
-        {{EXTRA_TITLE}}
-      </h2>
-      <ul class="list">
-{{EXTRA_ITEMS}}
-      </ul>
-    </section>
-
-    <section class="experience-section">
-      <h2>
-        <span class="icon-badge"><svg class="icon" viewBox="0 0 16 16"><path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/><path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/></svg></span>
-        {{EXPERIENCE_TITLE}}
-      </h2>
-
-      <div class="timeline">
-{{JOBS}}
-      </div>
-    </section>
-
-    <section>
-      <h2>
-        <span class="icon-badge"><svg class="icon" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg></span>
-        {{PROJECTS_TITLE}}
-      </h2>
-{{PROJECTS}}
-    </section>
-
-  </main>
-</div>
-
-<!-- ============================================================
+    <!-- ============================================================
   СПРАВОЧНИК РАЗМЕТКИ — при сборке index.html этот блок УДАЛЯЕТСЯ.
   Иконки — инлайн SVG из Bootstrap Icons (https://icons.getbootstrap.com),
   всегда viewBox="0 0 16 16", класс "icon".
@@ -473,6 +682,5 @@
       </div>
     </div>
 ============================================================ -->
-
-</body>
+  </body>
 </html>
