@@ -368,6 +368,26 @@
         font-size: 14.5px;
       }
 
+      .job-desc ul.list {
+        margin-top: 5px;
+      }
+
+      .job-desc ul.list li {
+        padding-left: 17px;
+        margin-bottom: 4px;
+      }
+
+      .job-desc ul.list li:last-child {
+        margin-bottom: 0;
+      }
+
+      .job-desc ul.list li::before {
+        left: 1px;
+        top: 0.64em;
+        width: 4px;
+        height: 4px;
+      }
+
       .job-tags {
         margin-top: 9px;
         display: flex;
@@ -500,26 +520,45 @@
         .experience-section {
           break-before: page;
           margin-top: 0;
-          padding-top: 26px;
+          padding-top: 18px;
         }
         .job {
           break-inside: avoid;
-          padding-top: 14px;
-          padding-bottom: 12px;
+          padding-top: 11px;
+          padding-bottom: 9px;
         }
         .job::before {
-          top: 22px;
-          bottom: -22px;
+          top: 19px;
+          bottom: -19px;
         }
         .job:last-child::before {
           bottom: auto;
-          height: 19.5px;
+          height: 16.5px;
         }
         .job::after {
-          top: 21px;
+          top: 18px;
         }
         .job-date {
-          padding-top: 18px;
+          padding-top: 15px;
+        }
+        .job-title {
+          font-size: 14.5px;
+        }
+        .job-desc {
+          margin-top: 2px;
+          font-size: 13.5px;
+        }
+        .job-desc ul.list {
+          margin-top: 3px;
+        }
+        .job-desc ul.list li {
+          margin-bottom: 2px;
+        }
+        .job-tags {
+          margin-top: 6px;
+        }
+        .job-link {
+          margin-top: 5px;
         }
         a {
           color: var(--accent-dark);
