@@ -7,13 +7,13 @@
 - `README.md` (в корне) — источник данных: все тексты резюме живут здесь.
 - `src/template.html` — HTML-шаблон: дизайн (инлайн CSS + SVG-иконки) и плейсхолдеры `{{...}}`, в конце — справочник разметки.
 - `index.html` — веб-версия, собирается из шаблона и README ИИ-агентом (скилл `/cv-transform-readme`).
-- `cv.pdf` — генерируется из `index.html` скриптом `src/compile-pdf.js` (puppeteer).
+- PDF-версия — генерируется из `index.html` скриптом `src/compile-pdf.js` (puppeteer). Имя файла берётся из README: заголовок `#` без отчества + роль до разделителя `·` (напр. `Бахарев Артём Senior Frontend Engineer.pdf`).
 
 ## Использование
 
 1. Форкните, затем склонируйте репозиторий.
 2. Внесите свои данные в файл `README.md` (в корне репозитория).
-3. В своём ИИ-агенте выполните `/cv-transform-readme` — скилл обновит `index.html` и сразу пересоберёт `cv.pdf`. Правила заполнения шаблона описаны в `.agents/skills/cv-transform-readme/SKILL.md`.
+3. В своём ИИ-агенте выполните `/cv-transform-readme` — скилл обновит `index.html` и сразу пересоберёт PDF. Правила заполнения шаблона описаны в `.agents/skills/cv-transform-readme/SKILL.md`.
 4. Если менялся только `index.html`, PDF можно пересобрать отдельно:
 
 ```bash

@@ -6,6 +6,8 @@
 
 **Senior Frontend Engineer · React / TypeScript / Frontend Architecture**
 
+**![icon](images/calendar-event.svg) Дата рождения:** 15.01.1990 (36 лет)
+
 **![icon](images/geo-alt.svg) Город:** Санкт-Петербург
 
 **![icon](images/mortarboard-fill.svg) Образование:** высшее техническое, Томский Университет Систем Управления и Радиоэлектроники (ТУСУР), факультет вычислительных систем, специальность «Управление и информатика в технических системах»
@@ -56,7 +58,7 @@
   <br>
   <br>
   <p>
-    <a href="https://mrthomasteller.github.io/cv/cv.pdf">PDF-версия</a>
+    <a href="https://mrthomasteller.github.io/cv/%D0%91%D0%B0%D1%85%D0%B0%D1%80%D0%B5%D0%B2%20%D0%90%D1%80%D1%82%D1%91%D0%BC%20Senior%20Frontend%20Engineer.pdf">PDF-версия</a>
   </p>
   <p>
   <a href="https://mrthomasteller.github.io/cv/">Веб-версия</a>

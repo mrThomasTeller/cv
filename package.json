@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "version": "2.0.0",
-  "description": "Резюме: README.md → index.html → cv.pdf",
+  "description": "Резюме: README.md → index.html → PDF",
   "type": "module",
   "scripts": {
     "compile-pdf": "node src/compile-pdf.js"
