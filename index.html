@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Бахарев Артём — Senior/Tech-lead Frontend Engineer</title>
+    <title>Бахарев Артём — Senior Frontend &amp; Full-stack разработчик</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,8 +38,14 @@
       }
 
       body {
-        font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI",
-          "Helvetica Neue", Arial, sans-serif;
+        font-family:
+          "Manrope",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
         background: var(--bg);
         color: var(--ink);
         line-height: 1.6;
@@ -53,7 +59,8 @@
         margin: 0 auto;
         background: var(--card);
         border-radius: var(--radius);
-        box-shadow: 0 1px 2px rgba(27, 26, 24, 0.05),
+        box-shadow:
+          0 1px 2px rgba(27, 26, 24, 0.05),
           0 24px 60px -28px rgba(27, 26, 24, 0.3);
         overflow: hidden;
         border-top: 5px solid var(--accent);
@@ -63,7 +70,8 @@
       header {
         position: relative;
         padding: 44px 52px 26px;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             900px 340px at 88% -140px,
             rgba(180, 85, 45, 0.1),
             transparent 62%
@@ -85,7 +93,9 @@
         object-position: center;
         flex-shrink: 0;
         filter: grayscale(0.15) contrast(1.02);
-        box-shadow: 0 0 0 1px var(--line), 10px 10px 0 -1px var(--accent-soft);
+        box-shadow:
+          0 0 0 1px var(--line),
+          10px 10px 0 -1px var(--accent-soft);
       }
 
       h1 {
@@ -155,7 +165,10 @@
         text-decoration: none;
         font-size: 10.5px;
         font-weight: 600;
-        transition: background 0.15s, border-color 0.15s, color 0.15s;
+        transition:
+          background 0.15s,
+          border-color 0.15s,
+          color 0.15s;
       }
 
       .contact:hover {
@@ -257,8 +270,8 @@
 
       code,
       .tag {
-        font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas,
-          monospace;
+        font-family:
+          "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
         font-size: 0.78em;
         background: var(--chip-bg);
         color: var(--chip-ink);
@@ -517,15 +530,32 @@
         .photo {
           box-shadow: 0 0 0 1px var(--line);
         }
+        /* полная версия длиннее двух страниц: опыт идёт сразу за «Ещё», без принудительного
+           разрыва — иначе хвост «Ещё» оставляет почти пустую вторую страницу */
         .experience-section {
-          break-before: page;
-          margin-top: 0;
           padding-top: 10px;
         }
         .job {
           break-inside: avoid;
           padding-top: 8px;
           padding-bottom: 7px;
+        }
+        /* место работы со списком достижений длиннее трети листа: целиком переносить его —
+           оставлять пустоту внизу страницы, поэтому рвём между пунктами, но не внутри них */
+        .job:has(ul.list) {
+          break-inside: auto;
+        }
+        .job-title,
+        .job-desc li,
+        .job-tags {
+          break-inside: avoid;
+        }
+        .job-title,
+        h2 {
+          break-after: avoid;
+        }
+        .project {
+          break-inside: avoid;
         }
         .job::before {
           top: 16px;
@@ -578,8 +608,10 @@
           <div>
             <h1>Бахарев Артём Александрович</h1>
             <div class="role">
-              Senior Frontend Engineer · React / TypeScript / Frontend
-              Architecture
+              Senior Frontend &amp; Full-stack Engineer ·
+              <span style="white-space: nowrap"
+                >React / TypeScript / Node.js</span
+              >
             </div>
             <div class="facts">
               <div class="fact">
@@ -589,17 +621,17 @@
                   />
                   <path
                     d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
-                  />
-                </svg>
-                <span><strong>Дата рождения:</strong> 15.01.1990 (36 лет)</span>
+                  /></svg
+                ><span
+                  ><strong>Дата рождения:</strong> 15.01.1990 (36 лет)</span
+                >
               </div>
               <div class="fact">
                 <svg class="icon" viewBox="0 0 16 16">
                   <path
                     d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
-                  />
-                </svg>
-                <span><strong>Город:</strong> Санкт-Петербург</span>
+                  /></svg
+                ><span><strong>Город:</strong> Санкт-Петербург</span>
               </div>
               <div class="fact">
                 <svg class="icon" viewBox="0 0 16 16">
@@ -608,9 +640,8 @@
                   />
                   <path
                     d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"
-                  />
-                </svg>
-                <span
+                  /></svg
+                ><span
                   ><strong>Образование:</strong> высшее техническое, Томский
                   Университет Систем Управления и&nbsp;Радиоэлектроники (ТУСУР),
                   факультет вычислительных систем, специальность «Управление
@@ -622,38 +653,38 @@
         </div>
 
         <div class="contacts">
-          <a class="contact" href="tel:+79234040704">
-            <svg class="icon" viewBox="0 0 16 16">
+          <a class="contact" href="tel:+79234040704"
+            ><svg class="icon" viewBox="0 0 16 16">
               <path
                 d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
               />
             </svg>
-            +7-923-404-0704
-          </a>
-          <a class="contact" href="https://t.me/mrthomasteller">
-            <svg class="icon" viewBox="0 0 16 16">
+            +7-923-404-0704</a
+          >
+          <a class="contact" href="https://t.me/mrthomasteller"
+            ><svg class="icon" viewBox="0 0 16 16">
               <path
                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
               />
             </svg>
-            @mrThomasTeller
-          </a>
-          <a class="contact" href="mailto:artyom.bakharev@gmail.com">
-            <svg class="icon" viewBox="0 0 16 16">
+            @mrThomasTeller</a
+          >
+          <a class="contact" href="mailto:artyom.bakharev@gmail.com"
+            ><svg class="icon" viewBox="0 0 16 16">
               <path
                 d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
               />
             </svg>
-            artyom.bakharev@gmail.com
-          </a>
-          <a class="contact" href="https://github.com/mrThomasTeller">
-            <svg class="icon" viewBox="0 0 16 16">
+            artyom.bakharev@gmail.com</a
+          >
+          <a class="contact" href="https://github.com/mrThomasTeller"
+            ><svg class="icon" viewBox="0 0 16 16">
               <path
                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
               />
             </svg>
-            github.com/mrThomasTeller
-          </a>
+            github.com/mrThomasTeller</a
+          >
         </div>
       </header>
 
@@ -673,10 +704,11 @@
           </h2>
           <p class="section-text">
             Ищу работу в качестве
-            <strong>Senior/Tech-lead Front-end разработчика</strong>. Полный
-            рабочий день, офис или гибрид. Интересны продуктовые задачи шире
-            интерфейсов — от архитектуры и&nbsp;инфраструктуры до серверной
-            части.
+            <strong
+              >Senior/Tech-lead Front-end или Full-stack разработчика</strong
+            >. Полный рабочий день, офис или гибрид. Интересны продуктовые
+            задачи шире интерфейсов — от архитектуры и&nbsp;инфраструктуры до
+            серверной части.
           </p>
         </section>
 
@@ -692,27 +724,39 @@
           </h2>
           <ul class="list">
             <li>
-              <strong>Более 15 лет опыта</strong> веб-разработки
-              (<code>Next.js</code>, <code>React</code>,
+              <strong>Более 15 лет опыта</strong> веб-разработки — Front-end
+              и&nbsp;Full-stack (<code>Next.js</code>, <code>React</code>,
               <code>TypeScript</code>, <code>Node.js</code>,
-              <code>Redux Toolkit</code>, <code>БЭМ</code>,
-              <code>webpack</code>, <code>Docker</code>)
+              <code>Redux Toolkit</code>, <code>PostgreSQL</code>,
+              <code>БЭМ</code>, <code>webpack</code>, <code>Docker</code>,
+              <code>GitLab CI/CD</code>)
             </li>
             <li>
-              Был <strong>ведущим Front-end разработчиком</strong> в компании
-              ShareVault с большим и долгосрочным проектом (США,
+              Спроектировал <strong>единую архитектуру</strong> комплекса
+              решений для ERP «Мой Склад» (<strong
+                >900+ компаний-клиентов</strong
+              >): монорепозиторий на <code>Node.js</code>/<code>Next.js</code>
+              с&nbsp;<code>tRPC</code>-API и&nbsp;<code>PostgreSQL</code>
+            </li>
+            <li>
+              Был
+              <strong>тех-лидом Front-end разработки</strong> в&nbsp;компании
+              ShareVault с&nbsp;большим и&nbsp;долгосрочным проектом — система
+              документооборота с&nbsp;повышенными требованиями
+              к&nbsp;безопасности (США,
               <a href="https://sharevault.com">sharevault.com</a>)
             </li>
             <li>
-              Был <strong>ведущим Front-end разработчиком</strong> в
-              интернет-магазине с высокой посещаемостью (<a
+              Был
+              <strong>ведущим Front-end разработчиком</strong>
+              в&nbsp;интернет-магазине с&nbsp;высокой посещаемостью (<a
                 href="https://sotmarket.ru"
                 >sotmarket.ru</a
               >)
             </li>
             <li>
               Отвечал за создание <strong>компонентных дизайн-систем</strong>,
-              архитектуру проприетарных фреймворков, а также за оптимизацию
+              архитектуру проприетарных фреймворков, а&nbsp;также за оптимизацию
               производительности нагруженных интерфейсов
             </li>
           </ul>
@@ -733,24 +777,43 @@
           </h2>
           <ul class="list">
             <li>
-              Разрабатывал проекты по <strong>TDD</strong>: юнит-,
-              integration- и&nbsp;<strong>E2E-тесты</strong>
-              (<code>Jest</code>, <code>Playwright</code>,
-              <code>TestCafe</code>)
+              Разрабатывал проекты по <strong>TDD</strong>: юнит-, integration-
+              и&nbsp;<strong>E2E-тесты</strong> (<code>Jest</code>,
+              <code>Playwright</code>, <code>TestCafe</code>)
             </li>
             <li>
               Отлично владею <code>CSS</code>, <code>Styled Components</code>,
               <code>CSS-modules</code>, <code>SASS</code>, <code>БЭМ</code>
             </li>
             <li>
+              Работаю с&nbsp;<strong>реляционными БД</strong>
+              (<code>PostgreSQL</code>, <code>MySQL</code>) с&nbsp;2009 года
+            </li>
+            <li>
               Большой опыт
               <strong>проектирования сложных программных продуктов</strong>
               (в&nbsp;т.ч. с&nbsp;применением UML), применяю принципы
-              и&nbsp;паттерны проектирования в&nbsp;ООП и&nbsp;ФП
+              и&nbsp;паттерны проектирования в&nbsp;ООП и&nbsp;ФП (монады
+              и&nbsp;т.д.)
+            </li>
+            <li>
+              По максимуму стараюсь придерживаться
+              <strong>функциональной парадигмы</strong>: изучал
+              <code>Haskell</code>, <code>Scala</code>, активно использовал ФП
+              в&nbsp;разработке на <code>JS</code> /
+              <code>TS</code> (<code>Ramda</code>)
+            </li>
+            <li>
+              Ценю красивую программную архитектуру и&nbsp;борюсь за чистоту
+              кода
             </li>
             <li>
               Активно применяю <strong>AI-инструменты</strong> для разработки
+              (<code>Claude Code</code>, собственные скиллы для агентов,
+              автотесты и&nbsp;нагрузочное тестирование, разработка по
+              спецификациям <code>Superpowers</code>/<code>SpecKit</code>)
             </li>
+            <li>Разговорный <strong>английский</strong> (на среднем уровне)</li>
           </ul>
         </section>
 
@@ -781,36 +844,48 @@
                 <div class="job-desc">
                   <ul class="list">
                     <li>
-                      Спроектировал <strong>единую архитектуру</strong> и
-                      перевёл комплекс решений для ERP «Мой Склад»
-                      (<strong>900+ компаний-клиентов</strong>) с разрозненных
-                      PHP-репозиториев на монорепозиторий на Next.js,
-                      значительно расширив функциональность. На самых
-                      востребованных приложениях
-                      <strong>более 2000 пользователей</strong>
+                      Спроектировал
+                      <strong>единую архитектуру</strong> и&nbsp;перевёл
+                      комплекс решений для ERP «Мой Склад» (<strong
+                        >900+ компаний-клиентов</strong
+                      >) с&nbsp;разрозненных PHP-репозиториев на
+                      <code>TypeScript</code>-монорепозиторий
+                      (<code>Node.js</code>/<code>Next.js</code>), значительно
+                      расширив функциональность. На самых востребованных
+                      приложениях <strong>более 2000 пользователей</strong>
                     </li>
                     <li>
                       Главное из решений: <code>Роботы 365</code> — no-code
-                      решение для создания сценариев автоматизации
+                      решение для создания сценариев автоматизации поверх API
+                      «Мой Склад»
+                    </li>
+                    <li>
+                      Внедрил <code>GitLab CI/CD</code> и&nbsp;сборку
+                      в&nbsp;<code>Docker</code>
                     </li>
                     <li>
                       Внедрил полный цикл AI-разработки (спецификации,
                       e2e-тесты, код-ревью, слежение за качеством кода,
                       множество скиллов для агентов под разные задачи
-                      в&nbsp;проекте) — <strong>скорость решения задач выросла
-                      в&nbsp;2-3 раза</strong> без потери качества
+                      в&nbsp;проекте) —
+                      <strong
+                        >скорость решения задач выросла в&nbsp;2-3 раза</strong
+                      >
+                      без потери качества
                     </li>
                   </ul>
                 </div>
+
                 <div class="job-tags">
                   <span class="tag">Next.js</span><span class="tag">React</span
                   ><span class="tag">TypeScript</span
-                  ><span class="tag">Node.js</span
-                  ><span class="tag">MUI</span><span class="tag">tRPC</span
+                  ><span class="tag">Node.js</span><span class="tag">MUI</span
+                  ><span class="tag">tRPC</span
                   ><span class="tag">PostgreSQL</span
                   ><span class="tag">Playwright</span
                   ><span class="tag">GitLab CI/CD</span
-                  ><span class="tag">Docker</span>
+                  ><span class="tag">Docker</span
+                  ><span class="tag">Claude Code</span>
                 </div>
                 <a class="job-link" href="https://nirguna.ru/">nirguna.ru</a>
               </div>
@@ -825,13 +900,20 @@
                 </div>
                 <div class="job-desc">
                   <ul class="list">
-                    <li>Подготовил к работе 5 групп (более 100 студентов)</li>
                     <li>
-                      Написал онлайн-учебник по JavaScript и разработал учебную
-                      программу по TypeScript и Redux Toolkit
+                      Подготовил к&nbsp;работе <strong>5 групп</strong> (более
+                      100 студентов)
+                    </li>
+                    <li>
+                      Написал онлайн-учебник по JavaScript для сайта школы
+                    </li>
+                    <li>
+                      Разработал и&nbsp;внедрил учебную программу по TypeScript
+                      и&nbsp;Redux Toolkit
                     </li>
                   </ul>
                 </div>
+
                 <div class="job-tags">
                   <span class="tag">React</span
                   ><span class="tag">Redux Toolkit</span
@@ -858,24 +940,41 @@
                 <div class="job-desc">
                   <ul class="list">
                     <li>
-                      Отвечал за Front-end разработку системы документооборота с
-                      повышенными требованиями к безопасности
+                      Отвечал за архитектуру и&nbsp;Front-end разработку системы
+                      документооборота (облачного хранилища) с&nbsp;повышенными
+                      требованиями к&nbsp;безопасности, в&nbsp;т.ч. мобильного
+                      интерфейса
                     </li>
-                    <li>Руководил командой из 3-х Front-end разработчиков</li>
                     <li>
-                      Руководил переводом сотен тысяч строк production-кода с
-                      ExtJS на React+Redux
+                      Руководил командой из&nbsp;3-х Front-end разработчиков
                     </li>
+                    <li>
+                      Руководил переводом
+                      <strong>сотен тысяч строк</strong> production-кода
+                      с&nbsp;ExtJS на React+Redux
+                    </li>
+                    <li>Разработал внутренний UI-kit для проекта</li>
                     <li>
                       Разработал проприетарный полностью functional-style
-                      state-менеджер на основе Redux и поддерживал его в течение
-                      5 лет
+                      state-менеджер на основе Redux и&nbsp;поддерживал его
+                      в&nbsp;течение 5 лет. В&nbsp;разработке использовался
+                      чисто функциональный подход (<code>Ramda</code>)
                     </li>
                     <li>
                       <strong>Ускорил в&nbsp;10 раз</strong> работу приложения
                       с&nbsp;сотнями тысяч документов
                     </li>
+                    <li>Руководил внедрением e2e-тестирования на TestCafe</li>
                   </ul>
+                </div>
+
+                <div class="job-tags">
+                  <span class="tag">React</span><span class="tag">Redux</span
+                  ><span class="tag">TypeScript</span
+                  ><span class="tag">Ramda</span
+                  ><span class="tag">Styled Components</span
+                  ><span class="tag">webpack</span><span class="tag">Jest</span
+                  ><span class="tag">TestCafe</span>
                 </div>
                 <a class="job-link" href="https://www.sharevault.com/"
                   >sharevault.com</a
@@ -892,6 +991,11 @@
                     >— интернет-магазин «Сотмаркет» (Москва)</span
                   >
                 </div>
+
+                <div class="job-desc">
+                  Front-end разработка интернет-магазина с&nbsp;высокой
+                  посещаемостью.
+                </div>
                 <div class="job-tags">
                   <span class="tag">JavaScript</span
                   ><span class="tag">jQuery</span
@@ -906,21 +1010,131 @@
             </div>
 
             <div class="job">
-              <div class="job-date">Ранний опыт<br />2009 — 2012</div>
+              <div class="job-date">12.2011 — 10.2012</div>
               <div class="job-body">
                 <div class="job-title">
-                  Full-stack разработка <span class="job-place">— Томск</span>
+                  Full-stack разработчик
+                  <span class="job-place">— SibEDGE (Томск)</span>
                 </div>
+
                 <div class="job-desc">
-                  Разработка сайтов, проектирование систем, разработка сложных
-                  интерфейсов и первое руководство небольшой командой.
+                  Разработка редактора диаграмм, интерфейса системы управления
+                  криобанков и&nbsp;другие задачи.
                 </div>
                 <div class="job-tags">
-                  <span class="tag">JavaScript</span><span class="tag">PHP</span
-                  ><span class="tag">C#/ASP.NET</span
-                  ><span class="tag">PostgreSQL</span>
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">jQuery</span
+                  ><span class="tag">Qooxdoo</span><span class="tag">C#</span
+                  ><span class="tag">ASP.NET</span
+                  ><span class="tag">ASP.NET MVC</span>
+                </div>
+                <a class="job-link" href="https://sibedge.team/"
+                  >sibedge.team</a
+                >
+              </div>
+            </div>
+
+            <div class="job">
+              <div class="job-date">10.2011 — 11.2011</div>
+              <div class="job-body">
+                <div class="job-title">
+                  Full-stack разработчик
+                  <span class="job-place"
+                    >— UTS — Универсальные Терминальные Системы (Томск)</span
+                  >
+                </div>
+
+                <div class="job-desc">
+                  Разработка системы мониторинга городских платёжных терминалов.
+                </div>
+                <div class="job-tags">
+                  <span class="tag">PHP</span><span class="tag">PostgreSQL</span
+                  ><span class="tag">C#</span><span class="tag">ASP.NET</span
+                  ><span class="tag">JavaScript</span
+                  ><span class="tag">Qooxdoo</span>
+                </div>
+                <a class="job-link" href="https://unitsys.ru/">unitsys.ru</a>
+              </div>
+            </div>
+
+            <div class="job">
+              <div class="job-date">01.2010 — 07.2011</div>
+              <div class="job-body">
+                <div class="job-title">
+                  Full-stack разработчик
+                  <span class="job-place"
+                    >— Avvea (Томск), новые технологии в&nbsp;интернет-рекламе
+                    (CPA)</span
+                  >
+                </div>
+
+                <div class="job-desc">
+                  Управлял небольшой группой JS-разработчиков. Проектировка
+                  системы (UML).
+                </div>
+                <div class="job-tags">
+                  <span class="tag">PostgreSQL</span
+                  ><span class="tag">JavaScript</span
+                  ><span class="tag">jQuery</span><span class="tag">ExtJS</span
+                  ><span class="tag">C#</span><span class="tag">PHP</span
+                  ><span class="tag">FreeBSD</span>
+                </div>
+                <a
+                  class="job-link"
+                  href="http://web.archive.org/web/20120521052046/http://avvea.ru/"
+                  >avvea.ru</a
+                >
+              </div>
+            </div>
+
+            <div class="job">
+              <div class="job-date">2009</div>
+              <div class="job-body">
+                <div class="job-title">
+                  Фриланс
+                  <span class="job-place"
+                    >— в&nbsp;основном Full-stack веб-разработка</span
+                  >
+                </div>
+
+                <div class="job-tags">
+                  <span class="tag">MySQL</span><span class="tag">PHP</span
+                  ><span class="tag">Kohana</span><span class="tag">CSS</span
+                  ><span class="tag">JavaScript</span
+                  ><span class="tag">jQuery</span><span class="tag">ExtJS</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>
+            <span class="icon-badge"
+              ><svg class="icon" viewBox="0 0 16 16">
+                <path
+                  d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"
+                /></svg
+            ></span>
+            Мои проекты
+          </h2>
+
+          <div class="project">
+            <div class="project-name">Shorty</div>
+            <div class="project-desc">
+              Телеграм-бот, который создаёт краткую выжимку из&nbsp;сообщений
+              в&nbsp;группе с&nbsp;помощью GPT-4.
+            </div>
+            <div class="project-tags">
+              <span class="tag">TypeScript</span><span class="tag">Node.js</span
+              ><span class="tag">RxJS</span><span class="tag">Jest</span
+              ><span class="tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/mrThomasTeller/shorty-telegram-summarization-bot"
+                >GitHub</a
+              >
             </div>
           </div>
         </section>

@@ -517,15 +517,32 @@
         .photo {
           box-shadow: 0 0 0 1px var(--line);
         }
+        /* полная версия длиннее двух страниц: опыт идёт сразу за «Ещё», без принудительного
+           разрыва — иначе хвост «Ещё» оставляет почти пустую вторую страницу */
         .experience-section {
-          break-before: page;
-          margin-top: 0;
           padding-top: 10px;
         }
         .job {
           break-inside: avoid;
           padding-top: 8px;
           padding-bottom: 7px;
+        }
+        /* место работы со списком достижений длиннее трети листа: целиком переносить его —
+           оставлять пустоту внизу страницы, поэтому рвём между пунктами, но не внутри них */
+        .job:has(ul.list) {
+          break-inside: auto;
+        }
+        .job-title,
+        .job-desc li,
+        .job-tags {
+          break-inside: avoid;
+        }
+        .job-title,
+        h2 {
+          break-after: avoid;
+        }
+        .project {
+          break-inside: avoid;
         }
         .job::before {
           top: 16px;
