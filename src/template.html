@@ -541,6 +541,11 @@
         h2 {
           break-after: avoid;
         }
+        /* теги и ссылка без описания над ними — оторванный хвост на следующем листе */
+        .job-tags,
+        .job-link {
+          break-before: avoid;
+        }
         .project {
           break-inside: avoid;
         }
