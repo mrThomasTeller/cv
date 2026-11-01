@@ -508,6 +508,10 @@
       }
 
       /* ---------- Print (PDF собирается без полей: отступы внутри, фон — в край листа) ---------- */
+      @page {
+        margin-bottom: 10mm;
+      }
+
       @media print {
         body {
           background: var(--card);
@@ -822,7 +826,7 @@
               автотесты и&nbsp;нагрузочное тестирование, разработка по
               спецификациям <code>Superpowers</code>/<code>SpecKit</code>)
             </li>
-            <li>Разговорный <strong>английский</strong> (на среднем уровне)</li>
+            <li><strong>Английский</strong> — B1</li>
           </ul>
         </section>
 
@@ -885,8 +889,8 @@
                     <li>
                       Выстроил обвязку <code>Claude Code</code> для команды:
                       <strong>40+ проектных скиллов агентов</strong> —
-                      трёхуровневая долгосрочная память агентов, код-ревью
-                      перед коммитом, e2e и&nbsp;нагрузочные тесты, параллельный
+                      трёхуровневая долгосрочная память агентов, код-ревью перед
+                      коммитом, e2e и&nbsp;нагрузочные тесты, параллельный
                       прогон 12 проверок, AI-дашборд отчётов агентов
                     </li>
                   </ul>
@@ -1079,7 +1083,7 @@
                 <div class="job-title">
                   Full-stack разработчик
                   <span class="job-place"
-                    >— Avvea (Томск), новые технологии в&nbsp;интернет-рекламе
+                    >— Avvea (Томск), новые технологии в интернет-рекламе
                     (CPA)</span
                   >
                 </div>
@@ -1109,7 +1113,7 @@
                 <div class="job-title">
                   Фриланс
                   <span class="job-place"
-                    >— в&nbsp;основном Full-stack веб-разработка</span
+                    >— в основном Full-stack веб-разработка</span
                   >
                 </div>
 
@@ -1144,9 +1148,11 @@
               iPhone, банку, маркетплейсам, ПК и&nbsp;умному дому.
             </div>
             <div class="project-tags">
-              <span class="tag">Claude Code</span><span class="tag">Agent Skills</span
+              <span class="tag">Claude Code</span
+              ><span class="tag">Agent Skills</span
               ><span class="tag">Node.js</span>
             </div>
+            <div class="project-links"></div>
           </div>
 
           <div class="project">
@@ -1154,13 +1160,14 @@
             <div class="project-desc">
               Журнал каждой сессии <code>Claude Code</code> через hooks, фоновое
               извлечение фактов и&nbsp;дневная рефлексия; выжимка памяти
-              приезжает в&nbsp;контекст на&nbsp;старте сессии и&nbsp;по&nbsp;теме
-              запроса.
+              приезжает в&nbsp;контекст на&nbsp;старте сессии
+              и&nbsp;по&nbsp;теме запроса.
             </div>
             <div class="project-tags">
               <span class="tag">Node.js</span><span class="tag">PostgreSQL</span
               ><span class="tag">Claude Code hooks</span>
             </div>
+            <div class="project-links"></div>
           </div>
 
           <div class="project">
@@ -1168,12 +1175,29 @@
             <div class="project-desc">
               Бот на&nbsp;домашнем роутере <code>OpenWrt</code>: Telegram, VK
               и&nbsp;iOS-приложение как окна к&nbsp;постоянной сессии
-              <code>Claude Code</code> на&nbsp;Mac; <strong>950+ коммитов</strong>.
+              <code>Claude Code</code> на&nbsp;Mac;
+              <strong>950+ коммитов</strong>.
             </div>
             <div class="project-tags">
               <span class="tag">Node.js</span><span class="tag">Telegraf</span
               ><span class="tag">OpenWrt</span><span class="tag">iOS</span>
             </div>
+            <div class="project-links"></div>
+          </div>
+
+          <div class="project">
+            <div class="project-name">MCP-серверы</div>
+            <div class="project-desc">
+              Разработал собственные <code>MCP</code>-серверы на&nbsp;<code
+                >Node.js</code
+              >
+              для интеграции AI-агентов с&nbsp;RuTracker и&nbsp;Transmission
+              (<code>rutracker-mcp</code>, <code>torrent-mcp</code>).
+            </div>
+            <div class="project-tags">
+              <span class="tag">Node.js</span><span class="tag">MCP</span>
+            </div>
+            <div class="project-links"></div>
           </div>
 
           <div class="project">
