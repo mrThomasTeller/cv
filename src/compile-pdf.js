@@ -32,7 +32,13 @@ function pdfNameFromReadme() {
 const pdfName = process.argv[2] || pdfNameFromReadme();
 const pdfPath = path.join(rootDir, pdfName);
 
-const browser = await puppeteer.launch();
+// Chrome от puppeteer живёт в ~/.cache/puppeteer и пропадает при чистке кешей — тогда печатаем системным Chrome
+const SYSTEM_CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const bundledChrome = await puppeteer.executablePath();
+const executablePath =
+  !fs.existsSync(bundledChrome) && fs.existsSync(SYSTEM_CHROME) ? SYSTEM_CHROME : bundledChrome;
+
+const browser = await puppeteer.launch({ executablePath });
 const page = await browser.newPage();
 await page.goto(`file://${htmlPath}`, { waitUntil: 'networkidle0' });
 await page.pdf({
